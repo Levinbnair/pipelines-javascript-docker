@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: levinbnairpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: levinbnairpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: levinbnairpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: levinbnairpipelinesjavascriptdocker 
+          image: mycontainerregistry2025seneca.azurecr.io/levinbnairpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
